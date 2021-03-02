@@ -1,0 +1,2 @@
+C:\Users\гусь\source\repos\LAB1OOP\Debug\LAB1OOP.exe
+C:\Users\гусь\source\repos\LAB1OOP\Debug\LAB1OOP.pdb
