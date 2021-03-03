@@ -6,6 +6,11 @@
 
 using namespace std;
 
+/*
+ *
+ * Task 1.1.5.4
+ *
+*/
 
 void SortArrayOfDoubles(double* arrayOfDoubles, int bufferSize)
 {
@@ -23,6 +28,11 @@ void SortArrayOfDoubles(double* arrayOfDoubles, int bufferSize)
 	}
 }
 
+/*
+ *
+ * Task 1.1.5.5
+ *
+*/
 
 int SearchValue(int* intArray, int bufferSize, int searchValue)
 {
@@ -51,6 +61,7 @@ void FifthBlockMain()
 		system("cls");
 		switch (taskChoice)
 		{
+			// 1.1.5.1
 			case FifthBlockTasks::First:
 			{
 				const int bufferSizeOfArrayOfDoubles = 8;
@@ -64,6 +75,7 @@ void FifthBlockMain()
 				delete[] arrayOfDoubles;
 				break;
 			}
+			// 1.1.5.2
 			case FifthBlockTasks::Second:
 			{
 				const int bufferSizeOfArrayOfBools = 8;
@@ -83,6 +95,7 @@ void FifthBlockMain()
 				delete[] arrayOfBools;
 				break;
 			}
+			// 1.1.5.3
 			case FifthBlockTasks::Third:
 			{
 				int bufferSize = 0;
@@ -98,6 +111,7 @@ void FifthBlockMain()
 				delete[] arrayOfChars;
 				break;
 			}
+			// 1.1.5.4
 			case FifthBlockTasks::Fourth:
 			{
 				int bufferSize = 10;
@@ -113,6 +127,7 @@ void FifthBlockMain()
 				delete[] arrayOfDoubles;
 				break;
 			}
+			// 1.1.5.5
 			case FifthBlockTasks::Fifth:
 			{
 				int bufferSizeOfArrayOfIntegers = 10;
@@ -142,6 +157,7 @@ void FifthBlockMain()
 				delete[] arrayOfIntegers;
 				break;
 			}
+			// 1.1.5.6
 			case FifthBlockTasks::Sixth:
 			{
 				int bufferSizeOfArrayOfChars = 15;
@@ -157,10 +173,13 @@ void FifthBlockMain()
 				delete[] arrayOfChars;
 				break;
 			}
+			// 1.1.5.7
 			case FifthBlockTasks::Seventh:
 			{
+
 				break;
 			}
+			// 1.1.5.8
 			case FifthBlockTasks::Eighth:
 			{
 				break;

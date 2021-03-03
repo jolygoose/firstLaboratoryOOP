@@ -5,6 +5,11 @@
 
 using namespace std;
 
+/*
+ *
+ * Task 1.1.4.4
+ *
+*/
 
 void FooFirst(double a)
 {
@@ -14,6 +19,11 @@ void FooFirst(double a)
 	cout << "New value of a in Foo(): " << a << endl;
 }
 
+/*
+ *
+ * Task 1.1.4.5
+ *
+*/
 
 void FooSecond(double& a)
 {
@@ -23,6 +33,11 @@ void FooSecond(double& a)
 	cout << "New value of a in Foo(): " << a << endl;
 }
 
+/*
+ *
+ * Task 1.1.4.8
+ *
+*/
 
 void FooThird(double* a)
 {
@@ -49,6 +64,7 @@ void FourthBlockMain()
 		system("cls");
 		switch (taskChoice)
 		{
+			// 1.1.4.1
 			case FourthBlockTasks::First:
 			{
 				int a = 5;
@@ -61,6 +77,7 @@ void FourthBlockMain()
 					<< "Address of d: " << &d << endl << endl;
 				break;
 			}
+			// 1.1.4.2
 			case FourthBlockTasks::Second:
 			{
 				int a[10] = { 1, 2, 7, -1, 5, 3, -1, 7, 1, 6 };
@@ -75,6 +92,7 @@ void FourthBlockMain()
 				cout << endl;
 				break;
 			}
+			// 1.1.4.3
 			case FourthBlockTasks::Third:
 			{
 				int a = 5;
@@ -86,6 +104,7 @@ void FourthBlockMain()
 					<< "Value of a: " << a << endl << endl;
 				break;
 			}
+			// 1.1.4.4
 			case FourthBlockTasks::Fourth:
 			{
 				double a = 5.0;
@@ -95,6 +114,7 @@ void FourthBlockMain()
 				cout << endl << "Value of a in main(): " << a << endl << endl;
 				break;
 			}
+			// 1.1.4.5
 			case FourthBlockTasks::Fifth:
 			{
 				double a = 5.0;
@@ -104,6 +124,7 @@ void FourthBlockMain()
 				cout << endl << "Value of a in main(): " << a << endl << endl;
 				break;
 			}
+			// 1.1.4.6
 			case FourthBlockTasks::Sixth:
 			{
 				int b = 5;
@@ -117,17 +138,23 @@ void FourthBlockMain()
 					<< "Value by pointer address: " << *pointer << endl << endl;
 				break;
 			}
+			// 1.1.4.7
 			case FourthBlockTasks::Seventh:
 			{
-				cout << "| ѕри операции объ€влени€ указател€ перед символом '*' "
-					<< "указываетс€ тип данных и сама операци€ представл€ет выражение "
-					<< "типƒанных* им€ѕеременной |" << endl
-					<< "| ќпераци€ разыменовани€ указател€ представл€ет выражение "
-					<< " в виде *им€”казател€ |" << endl
-					<< "| ќпераци€ умножени€ представл€ет выражение "
-					<< "в виде им€ѕеременной1 * им€ѕеременной2 |" << endl << endl;
+				/*
+				1. ѕри операции объ€влени€ указател€ перед символом '*' 
+				указываетс€ тип данных и сама операци€ представл€ет выражение
+				типƒанных* им€ѕеременной
+				2. ќпераци€ разыменовани€ указател€ представл€ет выражение
+				в виде *им€”казател€
+				3. ќпераци€ умножени€ представл€ет выражение
+				в виде им€ѕеременной1 * им€ѕеременной2
+				ѕоэтому €зык видит 
+				*/
+				cout << "Task completed, let's ask the author" << endl << endl;
 				break;
 			}
+			// 1.1.4.8
 			case FourthBlockTasks::Eighth:
 			{
 				double value = 5.0;

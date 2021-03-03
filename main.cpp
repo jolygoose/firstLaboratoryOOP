@@ -35,26 +35,31 @@ int main()
 		system("cls");
 		switch (taskChoice)
 		{
+			// 1.1.1.*
 			case Menu::FirstBlock:
 			{
 				FirstBlockMain();
 				break;
 			}
+			// 1.1.2.*
 			case Menu::SecondBlock:
 			{
 				SecondBlockMain();
 				break;
 			}
+			// 1.1.3.*
 			case Menu::ThirdBlock:
 			{
 				ThirdBlockMain();
 				break;
 			}
+			// 1.1.4.*
 			case Menu::FourthBlock:
 			{
 				FourthBlockMain();
 				break;
 			}
+			// 1.1.5.*
 			case Menu::FifthBlock:
 			{
 				FifthBlockMain();

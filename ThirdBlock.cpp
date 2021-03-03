@@ -63,6 +63,7 @@ void ThirdBlockMain()
 		system("cls");
 		switch (taskChoice)
 		{
+			// 1.1.3.1
 			case ThirdBlockTasks::Second:
 			{
 				cout << "Enter base value: ";
@@ -73,6 +74,7 @@ void ThirdBlockMain()
 					<< endl << endl;
 				break;
 			}
+			// 1.1.3.2
 			case ThirdBlockTasks::Third:
 			{
 				cout << "Enter base value: ";
@@ -82,6 +84,7 @@ void ThirdBlockMain()
 				DemoGetPower(base, exponent);
 				break;
 			}
+			// 1.1.3.3
 			case ThirdBlockTasks::Fourth:
 			{
 				cout << "Enter value: ";

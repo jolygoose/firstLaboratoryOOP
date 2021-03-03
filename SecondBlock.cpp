@@ -67,6 +67,7 @@ void SecondBlockMain()
 		system("cls");
 		switch (taskChoice)
 		{
+			// 1.1.2.1
 			case SecondBlockTasks::First:
 			{
 				const int bufferSizeOfArrayOfIntegers = 10;
@@ -83,6 +84,7 @@ void SecondBlockMain()
 				delete[] arrayOfIntegers;
 				break;
 			}
+			// 1.1.2.2
 			case SecondBlockTasks::Second:
 			{
 				const int bufferSizeOfArrayOfFloats = 12;
@@ -103,6 +105,7 @@ void SecondBlockMain()
 				delete[] arrayOfFloats;
 				break;
 			}
+			// 1.1.2.3
 			case SecondBlockTasks::Third:
 			{
 				const int bufferSizeOfArrayOfChars = 8;
