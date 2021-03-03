@@ -46,6 +46,57 @@ int SearchValue(int* intArray, int bufferSize, int searchValue)
 	return 0;
 }
 
+/*
+ *
+ * Task 1.1.5.7
+ *
+*/
+
+
+int* MakeRandomArray(int arraySize)
+{
+	int minimumBorder = 0;
+	int maximumBorder = 100;
+	int* newArrayOfIntegers = new int[arraySize];
+	for (int i = 0; i < arraySize; ++i)
+	{
+		newArrayOfIntegers[i] = GetRadndomIntegerValue
+			(minimumBorder, maximumBorder);
+	}
+	return newArrayOfIntegers;
+}
+
+/*
+ *
+ * Task 1.1.5.8
+ *
+*/
+
+int* ReadArray(int count)
+{
+	cout << "Fill array to check it" << endl << endl;
+	int* values = new int[count];
+	for (int i = 0; i < count; i++)
+	{
+		cout << "Enter a[" << i << "]: ";
+		cin >> values[i];
+	}
+	return values;
+}
+
+int CountPositiveValues(int* values, int count)
+{
+	int result = 0;
+	for (int i = 0; i < count; i++)
+	{
+		if (values[i] > 0)
+		{
+			result++;
+		}
+	}
+	return result;
+}
+
 
 void FifthBlockMain()
 {
@@ -176,12 +227,32 @@ void FifthBlockMain()
 			// 1.1.5.7
 			case FifthBlockTasks::Seventh:
 			{
-
+				int firstArraySize = 5;
+				int secondArraySize = 8;
+				int thirdArraySize = 13;
+				int* firstArray = MakeRandomArray(firstArraySize);
+				int* secondArray = MakeRandomArray(secondArraySize);
+				int* thirdArray = MakeRandomArray(thirdArraySize);
+				ShowArrayOfIntegers(firstArray, firstArraySize);
+				ShowArrayOfIntegers(secondArray, secondArraySize);
+				ShowArrayOfIntegers(thirdArray, thirdArraySize);
+				delete[] firstArray;
+				delete[] secondArray;
+				delete[] thirdArray;
 				break;
 			}
 			// 1.1.5.8
 			case FifthBlockTasks::Eighth:
 			{
+				int count = 15;
+				int* values = ReadArray(count);
+				cout << "Count is: " << CountPositiveValues(values, count) << endl;
+				
+				delete[] values;
+				count = 20;
+				values = ReadArray(count);
+				cout << "Count is: " << CountPositiveValues(values, count) << endl;
+				delete[] values;
 				break;
 			}
 			case FifthBlockTasks::Exit:
@@ -205,40 +276,10 @@ void FifthBlockMain()
 
 
 /*
-int* ReadArray(int count)
-{
-	int* values = new int[count];
-	for (int i = 0; i < count; i++)
-	{
-		cin >> values[i];
-	}
-	return values;
-}
 
-int CountPositiveValues(int* values, int count)
-{
-	int result = 0;
-	for (int i = 0; i < count; i++)
-	{
-		if (values[i] > 0)
-		{
-			result++;
-		}
-	}
-	return result;
-}
 
 int main()
 {
-	int count = 15;
-	int* values = ReadArray(count);
-	cout << "Count is: " << CountPositiveValues(values, count) << endl;
-
-	count = 20;
-	delete[] values;
-	values = ReadArray(count);
-	cout << "Count is: " << CountPositiveValues(values, count) << endl;
-
-	delete[] values;
+	
 }
 */

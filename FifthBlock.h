@@ -18,6 +18,10 @@ enum class FifthBlockTasks
 
 void SortArrayOfDoubles(double* arrayOfDoubles, int bufferSize);
 
+int SearchValue(int* intArray, int bufferSize, int searchValue);
+
+int* MakeRandomArray(int arraySize);
+
 void FifthBlockMain();
 
 #endif // !_FIFTHBLOCK_H_
