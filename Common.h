@@ -23,6 +23,10 @@ double GetCorrectDoubleValue();
 /// @return Результат считывания введённого значения
 char GetCorrectCharValue();
 
+int GetRadndomIntegerValue(int minimumBorder, int maximumBorder);
+
+double GetRadndomDoubleValue();
+
 void ShowArrayOfIntegers(int* arrayOfIntegers,
 	const int bufferSize);
 

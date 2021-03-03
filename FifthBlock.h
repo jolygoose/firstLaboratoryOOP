@@ -16,13 +16,7 @@ enum class FifthBlockTasks
 	Exit = 27
 };
 
-
-
 void SortArrayOfDoubles(double* arrayOfDoubles, int bufferSize);
-
-double GetRadndomDoubleValue();
-
-int GetRadndomIntegerValue();
 
 void FifthBlockMain();
 

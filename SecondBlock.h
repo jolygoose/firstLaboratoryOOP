@@ -3,6 +3,7 @@
 #ifndef _SECONDBLOCK_H_
 #define _SECONDBLOCK_H_
 
+
 enum class SecondBlockTasks
 {
 	First = 49,
@@ -14,13 +15,7 @@ enum class SecondBlockTasks
 void SortArrayOfIntegers(int* arrayOfIntegers,
 	const int bufferSize);
 
-void DeleteArrayOfIntegers(int* arrayOfIntegers);
-
 int CompareValues(float* arrayOfFloats, int bufferSize, int requiredValue);
-
-void DeleteArrayOfFloats(float* arrayOfFloats);
-
-void DeleteArrayOfChars(char* arrayOfChars);
 
 void SecondBlockMain();
 

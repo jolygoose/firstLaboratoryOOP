@@ -81,6 +81,24 @@ char GetCorrectCharValue()
 }
 
 
+int GetRadndomIntegerValue(int minimumBorder, int maximumBorder)
+{
+	double fractionDenominator = static_cast <double> (RAND_MAX) + 1.0;
+	static const double fraction = (1.0 / fractionDenominator);
+	int randomResult = static_cast <int> (rand() * fraction *
+		(minimumBorder - maximumBorder + 1) + minimumBorder);
+	return randomResult;
+}
+
+
+double GetRadndomDoubleValue()
+{
+	int maximumBorder = 10000;
+	return (double)(rand() % maximumBorder)
+		/ (double)maximumBorder + (double)(rand() % maximumBorder);
+}
+
+
 void ShowArrayOfIntegers(int* arrayOfIntegers,
 	const int bufferSize)
 {

@@ -29,12 +29,6 @@ void SortArrayOfIntegers(int* arrayOfIntegers,
 	}
 }
 
-
-void DeleteArrayOfIntegers(int* arrayOfIntegers)
-{
-	delete[] arrayOfIntegers;
-}
-
 /*
  *
  * Task 1.1.2.2
@@ -54,23 +48,11 @@ int CompareValues(float* arrayOfFloats, int bufferSize, int requiredValue)
 	return sum;
 }
 
-
-void DeleteArrayOfFloats(float* arrayOfFloats)
-{
-	delete[] arrayOfFloats;
-}
-
 /*
  *
  * Task 1.1.2.3
  *
 */
-
-void DeleteArrayOfChars(char* arrayOfChars)
-{
-	delete[] arrayOfChars;
-}
-
 
 void SecondBlockMain()
 {
@@ -98,7 +80,7 @@ void SecondBlockMain()
 				cout << "~ Sorted ~" << endl;
 				SortArrayOfIntegers(arrayOfIntegers, bufferSizeOfArrayOfIntegers);
 				ShowArrayOfIntegers(arrayOfIntegers, bufferSizeOfArrayOfIntegers);
-				DeleteArrayOfIntegers(arrayOfIntegers);
+				delete[] arrayOfIntegers;
 				break;
 			}
 			case SecondBlockTasks::Second:
@@ -118,7 +100,7 @@ void SecondBlockMain()
 					bufferSizeOfArrayOfFloats, requiredValue);
 				cout << endl << "Elements of array more than " << requiredValue
 					<< " is: " << countValues << endl << endl;
-				DeleteArrayOfFloats(arrayOfFloats);
+				delete[] arrayOfFloats;
 				break;
 			}
 			case SecondBlockTasks::Third:
@@ -132,7 +114,7 @@ void SecondBlockMain()
 				}
 				ShowArrayOfChars(arrayOfChars, bufferSizeOfArrayOfChars);
 				ShowLetters(arrayOfChars, bufferSizeOfArrayOfChars);
-				DeleteArrayOfChars(arrayOfChars);
+				delete[] arrayOfChars;
 				break;
 			}
 			case SecondBlockTasks::Exit:
