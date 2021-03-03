@@ -81,3 +81,85 @@ char GetCorrectCharValue()
 }
 
 
+void ShowArrayOfIntegers(int* arrayOfIntegers,
+	const int bufferSize)
+{
+	cout << endl << "Array of integers:" << endl;
+	for (int i = 0; i < bufferSize; ++i)
+	{
+		cout << "[" << arrayOfIntegers[i] << "]  ";
+	}
+	cout << endl << endl;
+}
+
+
+void ShowArrayOfFloats(float* arrayOfFloats, int bufferSize)
+{
+	cout << endl << "Array of floats:" << endl;
+	for (int i = 0; i < bufferSize; ++i)
+	{
+		cout << "[" << arrayOfFloats[i] << "]  ";
+	}
+	cout << endl << endl;
+}
+
+
+void ShowArrayOfDoubles(double* arrayOfDoubles, int bufferSize)
+{
+	cout << "Array of double:" << endl;
+	for (int i = 0; i < bufferSize; ++i)
+	{
+		cout << "[" << arrayOfDoubles[i] << "]  ";
+	}
+	cout << endl << endl;
+}
+
+
+void ShowArrayOfBools(bool* arrayOfBools, int bufferSize)
+{
+	cout << "Array of bool:" << endl;
+	for (int i = 0; i < bufferSize; ++i)
+	{
+		if (arrayOfBools[i] == 1)
+		{
+			cout << "true\t";
+		}
+		else
+		{
+			cout << "false\t";
+		}
+	}
+	cout << endl << endl;
+}
+
+
+void ShowArrayOfChars(char* arrayOfChars, int bufferSize)
+{
+	cout << endl << "Array of chars:" << endl;
+	for (int i = 0; i < bufferSize; ++i)
+	{
+		cout << "[" << arrayOfChars[i] << "]  ";
+	}
+	cout << endl << endl;
+}
+
+
+bool IsSymbolIsLetter(char symbol)
+{
+	return (((symbol >= 'A') && (symbol <= 'Z'))
+		|| ((symbol >= 'a') && (symbol <= 'z')));
+}
+
+
+void ShowLetters(char* arrayOfChars, int bufferSize)
+{
+	cout << "All letters in your array:" << endl;
+	for (int i = 0; i < bufferSize; ++i)
+	{
+		if (IsSymbolIsLetter(arrayOfChars[i]))
+		{
+			cout << "[" << arrayOfChars[i] << "]  ";
+		}
+	}
+	cout << endl << endl;
+}

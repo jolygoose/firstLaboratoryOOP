@@ -12,18 +12,6 @@ using namespace std;
  * 
 */
 
-void ShowArrayOfIntegers(int* arrayOfIntegers,
-	const int bufferSize)
-{
-	cout << endl << "Array of integers:" << endl;
-	for (int i = 0; i < bufferSize; ++i)
-	{
-		cout << "[" << arrayOfIntegers[i] << "]  ";
-	}
-	cout << endl << endl;
-}
-
-
 void SortArrayOfIntegers(int* arrayOfIntegers,
 	const int bufferSize)
 {
@@ -53,17 +41,6 @@ void DeleteArrayOfIntegers(int* arrayOfIntegers)
  *
 */
 
-void ShowArrayOfFloats(float* arrayOfFloats, int bufferSize)
-{
-	cout << endl << "Array of floats:" << endl;
-	for (int i = 0; i < bufferSize; ++i)
-	{
-		cout << "[" << arrayOfFloats[i] << "]  ";
-	}
-	cout << endl << endl;
-}
-
-
 int CompareValues(float* arrayOfFloats, int bufferSize, int requiredValue)
 {
 	int sum = 0;
@@ -88,38 +65,6 @@ void DeleteArrayOfFloats(float* arrayOfFloats)
  * Task 1.1.2.3
  *
 */
-
-void ShowArrayOfChars(char* arrayOfChars, int bufferSize)
-{
-	cout << endl << "Array of chars:" << endl;
-	for (int i = 0; i < bufferSize; ++i)
-	{
-		cout << "[" << arrayOfChars[i] << "]  ";
-	}
-	cout << endl << endl;
-}
-
-
-bool IsSymbolIsLetter(char symbol)
-{
-	return (((symbol >= 'A') && (symbol <= 'Z'))
-		|| ((symbol >= 'a') && (symbol <= 'z')));
-}
-
-
-void ShowLetters(char* arrayOfChars, int bufferSize)
-{
-	cout << "All letters in your array:" << endl;
-	for (int i = 0; i < bufferSize; ++i)
-	{
-		if (IsSymbolIsLetter(arrayOfChars[i]))
-		{
-			cout << "[" << arrayOfChars[i] << "]  ";
-		}
-	}
-	cout << endl << endl;
-}
-
 
 void DeleteArrayOfChars(char* arrayOfChars)
 {

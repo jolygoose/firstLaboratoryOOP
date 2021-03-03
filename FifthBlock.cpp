@@ -6,47 +6,6 @@
 
 using namespace std;
 
-
-void ShowArrayOfDoubles(double* arrayOfDoubles, int bufferSize)
-{
-	cout << "Array of double:" << endl;
-	for (int i = 0; i < bufferSize; ++i)
-	{
-		cout << "[" << arrayOfDoubles[i] << "]  ";
-	}
-	cout << endl << endl;
-}
-
-
-void ShowArrayOfBools(bool* arrayOfBools, int bufferSize)
-{
-	cout << "Array of bool:" << endl;
-	for (int i = 0; i < bufferSize; ++i)
-	{
-		if (arrayOfBools[i] == 1)
-		{
-			cout << "true\t";
-		}
-		else
-		{
-			cout << "false\t";
-		}
-	}
-	cout << endl << endl;
-}
-
-
-void ShowCharsArray(char* arrayOfChars, int bufferSize)
-{
-	cout << endl << "Your char array is:" << endl;
-	for (int i = 0; i < bufferSize; ++i)
-	{
-		cout << "[" << arrayOfChars[i] << "]  ";
-	}
-	cout << endl << endl;
-}
-
-
 void SortArrayOfDoubles(double* arrayOfDoubles, int bufferSize)
 {
 	for (int i = 0; i < bufferSize; ++i)
@@ -81,17 +40,6 @@ int GetRadndomIntegerValue()
 	int randomResult = static_cast <int> (rand() * fraction *
 		(minimumBorder - maximumBorder + 1) + minimumBorder);
 	return randomResult;
-}
-
-
-void ShowIntegersArray(int* arrayOfIntegers, const int bufferSize)
-{
-	cout << "Array of integers:" << endl;
-	for (int i = 0; i < bufferSize; ++i)
-	{
-		cout << "[" << arrayOfIntegers[i] << "]  ";
-	}
-	cout << endl << endl;
 }
 
 
@@ -166,7 +114,7 @@ void FifthBlockMain()
 					cout << "Enter a[" << i << "]: ";
 					arrayOfChars[i] = GetCorrectCharValue();
 				}
-				ShowCharsArray(arrayOfChars, bufferSize);
+				ShowArrayOfChars(arrayOfChars, bufferSize);
 				delete[] arrayOfChars;
 				break;
 			}
@@ -194,7 +142,7 @@ void FifthBlockMain()
 				{
 					arrayOfIntegers[i] = GetRadndomIntegerValue();
 				}
-				ShowIntegersArray(arrayOfIntegers, bufferSizeOfArrayOfIntegers);
+				ShowArrayOfIntegers(arrayOfIntegers, bufferSizeOfArrayOfIntegers);
 				cout << "Enter searching value: ";
 				searchingValue = GetCorrectIntegerValue();
 				int resultOfSearch = SearchValue(arrayOfIntegers,
@@ -213,6 +161,28 @@ void FifthBlockMain()
 			}
 			case FifthBlockTasks::Sixth:
 			{
+				int bufferSizeOfArrayOfIntegers = 10;
+				int searchingValue = 0;
+				int* arrayOfIntegers = new int[bufferSizeOfArrayOfIntegers];
+				for (int i = 0; i < bufferSizeOfArrayOfIntegers; ++i)
+				{
+					arrayOfIntegers[i] = GetRadndomIntegerValue();
+				}
+				ShowArrayOfIntegers(arrayOfIntegers, bufferSizeOfArrayOfIntegers);
+				cout << "Enter searching value: ";
+				searchingValue = GetCorrectIntegerValue();
+				int resultOfSearch = SearchValue(arrayOfIntegers,
+					bufferSizeOfArrayOfIntegers, searchingValue);
+				if ((searchingValue != arrayOfIntegers[0]) && (resultOfSearch == 0))
+				{
+					cout << "There is no desired element" << endl << endl;
+				}
+				else
+				{
+					cout << endl << "Index of searching value " << searchingValue
+						<< " is: " << resultOfSearch << endl << endl;
+				}
+				delete[] arrayOfIntegers;
 				break;
 			}
 			case FifthBlockTasks::Seventh:

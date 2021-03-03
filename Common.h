@@ -23,4 +23,19 @@ double GetCorrectDoubleValue();
 /// @return Результат считывания введённого значения
 char GetCorrectCharValue();
 
+void ShowArrayOfIntegers(int* arrayOfIntegers,
+	const int bufferSize);
+
+void ShowArrayOfFloats(float* arrayOfFloats, int bufferSize);
+
+void ShowArrayOfDoubles(double* newArray, int bufferSize);
+
+void ShowArrayOfBools(bool* newArray, int bufferSize);
+
+void ShowArrayOfChars(char* arrayOfChars, int bufferSize);
+
+bool IsSymbolIsLetter(char symbol);
+
+void ShowLetters(char* arrayOfChars, int bufferSize);
+
 #endif // !_COMMON_H_

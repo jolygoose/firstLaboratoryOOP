@@ -11,25 +11,14 @@ enum class SecondBlockTasks
 	Exit = 27
 };
 
-void ShowArrayOfIntegers(int* arrayOfIntegers,
-	const int bufferSize);
-
 void SortArrayOfIntegers(int* arrayOfIntegers,
 	const int bufferSize);
 
 void DeleteArrayOfIntegers(int* arrayOfIntegers);
 
-void ShowArrayOfFloats(float* arrayOfFloats, int bufferSize);
-
 int CompareValues(float* arrayOfFloats, int bufferSize, int requiredValue);
 
 void DeleteArrayOfFloats(float* arrayOfFloats);
-
-void ShowArrayOfChars(char* arrayOfChars, int bufferSize);
-
-bool IsSymbolIsLetter(char symbol);
-
-void ShowLetters(char* arrayOfChars, int bufferSize);
 
 void DeleteArrayOfChars(char* arrayOfChars);
 

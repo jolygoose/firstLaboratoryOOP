@@ -16,11 +16,7 @@ enum class FifthBlockTasks
 	Exit = 27
 };
 
-void ShowArrayOfDoubles(double* newArray, int bufferSize);
 
-void ShowArrayOfBools(bool* newArray, int bufferSize);
-
-void ShowCharsArray(char* arrayOfChars, int bufferSize);
 
 void SortArrayOfDoubles(double* arrayOfDoubles, int bufferSize);
 
