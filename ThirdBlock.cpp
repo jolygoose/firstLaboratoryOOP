@@ -9,14 +9,33 @@ using namespace std;
 
 /*
  *
- * Task 1.1.3.1
+ * Task 1.1.3.1-2
  *
 */
 
+// TODO: Powers with 'minus'
 double GetPower(double base, int exponent)
 {
-	return pow(base, exponent);
+	double result = 0;
+	if (exponent == 0)
+	{
+		result = 1;
+	}
+	else if (exponent == 1)
+	{
+		result = base;
+	}
+	else if ((exponent % 2) == 1)
+	{
+		result = base * GetPower(base * base, exponent / 2);
+	}
+	else
+	{
+		result = GetPower(base * base, exponent / 2);
+	}
+	return result;
 }
+
 
 /*
  *

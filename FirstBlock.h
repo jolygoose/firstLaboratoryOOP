@@ -3,6 +3,7 @@
 #ifndef _FIRSTBLOCK_H_
 #define _FIRSTBLOCK_H_
 
+/// @brief ѕеречисление пунктов меню первого блока заданий
 enum class FirstBlockTasks
 {
 	First = 49,
@@ -10,10 +11,15 @@ enum class FirstBlockTasks
 	Exit = 27
 };
 
-void FirstBreakpoints();
+/// @brief ‘ункци€, в которой необходимо провер€ть значени€ в переменных
+/// на каждом шаге цикла, использу€ точки останова
+void FirstFunctionWithBreakpoints();
 
-void SecondBreakpoints();
+/// @brief ‘ункци€, в которой необходимо проверить значение в переменных
+/// на 777-ом шаге цикла, использу€ точку останова
+void SecondFunctionWithBreakpoints();
 
+/// @brief ‘ункци€-меню дл€ работы с задани€ми первого блока
 void FirstBlockMain();
 
 #endif // !_FIRSTBLOCK_H_

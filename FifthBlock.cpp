@@ -12,17 +12,17 @@ using namespace std;
  *
 */
 
-void SortArrayOfDoubles(double* arrayOfDoubles, int bufferSize)
+void SortArrayOfDoubles(double* arrayOfValues, int bufferSize)
 {
 	for (int i = 0; i < bufferSize; ++i)
 	{
 		for (int j = 0; j < bufferSize - 1; ++j)
 		{
-			if (arrayOfDoubles[j] > arrayOfDoubles[j + 1])
+			if (arrayOfValues[j] > arrayOfValues[j + 1])
 			{
-				double temporaryPool = arrayOfDoubles[j];
-				arrayOfDoubles[j] = arrayOfDoubles[j + 1];
-				arrayOfDoubles[j + 1] = temporaryPool;
+				double temporaryPool = arrayOfValues[j];
+				arrayOfValues[j] = arrayOfValues[j + 1];
+				arrayOfValues[j + 1] = temporaryPool;
 			}
 		}
 	}
@@ -34,11 +34,11 @@ void SortArrayOfDoubles(double* arrayOfDoubles, int bufferSize)
  *
 */
 
-int SearchValue(int* intArray, int bufferSize, int searchValue)
+int SearchValue(int* arrayOfValues, int bufferSize, int searchValue)
 {
 	for (int i = 0; i < bufferSize; ++i)
 	{
-		if (intArray[i] == searchValue)
+		if (arrayOfValues[i] == searchValue)
 		{
 			return i;
 		}

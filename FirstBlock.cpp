@@ -6,7 +6,7 @@
 using namespace std;
 
 
-void FirstBreakpoints()
+void FirstFunctionWithBreakpoints()
 {
 	double add = 1.0;
 	double sum = 0.0;
@@ -19,7 +19,7 @@ void FirstBreakpoints()
 }
 
 
-void SecondBreakpoints()
+void SecondFunctionWithBreakpoints()
 {
 	double add = 1.0;
 	double sum = 0.0;
@@ -55,13 +55,13 @@ void FirstBlockMain()
 			// 1.1.1.1
 			case FirstBlockTasks::First:
 			{
-				FirstBreakpoints();
+				FirstFunctionWithBreakpoints();
 				break;
 			}
 			// 1.1.1.2
 			case FirstBlockTasks::Second:
 			{
-				SecondBreakpoints();
+				SecondFunctionWithBreakpoints();
 				break;
 			}
 			case FirstBlockTasks::Exit:

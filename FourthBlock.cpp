@@ -11,7 +11,7 @@ using namespace std;
  *
 */
 
-void FooFirst(double a)
+void Foo(double a)
 {
 	cout << "Address of a in Foo(): " << &a << endl;
 	cout << "Value of a in Foo(): " << a << endl;
@@ -25,12 +25,12 @@ void FooFirst(double a)
  *
 */
 
-void FooSecond(double& a)
+void Bar(double& a)
 {
-	cout << "Address of a in Foo(): " << &a << endl;
-	cout << "Value of a in Foo(): " << a << endl;
+	cout << "Address of a in Bar(): " << &a << endl;
+	cout << "Value of a in Bar(): " << a << endl;
 	a = 15.0;
-	cout << "New value of a in Foo(): " << a << endl;
+	cout << "New value of a in Bar(): " << a << endl;
 }
 
 /*
@@ -39,7 +39,7 @@ void FooSecond(double& a)
  *
 */
 
-void FooThird(double* a)
+void Baz(double* a)
 {
 	cout << "Address in pointer: " << a << endl;
 	cout << "Address of pointer: " << &a << endl;
@@ -110,7 +110,7 @@ void FourthBlockMain()
 				double a = 5.0;
 				cout << "Address of a in main(): " << &a << endl
 					<< "Value of a in main(): " << a << endl << endl;
-				FooFirst(a);
+				Foo(a);
 				cout << endl << "Value of a in main(): " << a << endl << endl;
 				break;
 			}
@@ -120,7 +120,7 @@ void FourthBlockMain()
 				double a = 5.0;
 				cout << "Address of a in main(): " << &a << endl
 					<< "Value of a in main(): " << a << endl << endl;
-				FooSecond(a);
+				Bar(a);
 				cout << endl << "Value of a in main(): " << a << endl << endl;
 				break;
 			}
@@ -163,7 +163,7 @@ void FourthBlockMain()
 					<< "Address in pointerValue in main(): " << pointerValue << endl
 					<< "Address of pointerValue in main(): " << &pointerValue << endl
 					<< "Value of a in main(): " << value << endl << endl;
-				FooThird(pointerValue);
+				Baz(pointerValue);
 				cout << endl << "Value of a in main(): " << value << endl << endl;
 				break;
 			}

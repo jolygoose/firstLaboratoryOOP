@@ -38,34 +38,33 @@ double GetRadndomDoubleValue();
 
 /// @brief Функция вывода на экран массива значений типа "int"
 /// 
-/// @param arrayOfIntegers - массив значений
+/// @param arrayOfValues - массив значений
 /// @param bufferSize - размер массива
-void ShowArrayOfIntegers(int* arrayOfIntegers,
-	const int bufferSize);
+void ShowArrayOfIntegers(int* arrayOfValues, const int bufferSize);
 
 /// @brief Функция вывода на экран массива значений типа "float"
 /// 
-/// @param arrayOfIntegers - массив значений
+/// @param arrayOfValues - массив значений
 /// @param bufferSize - размер массива
-void ShowArrayOfFloats(float* arrayOfFloats, int bufferSize);
+void ShowArrayOfFloats(float* arrayOfValues, int bufferSize);
 
 /// @brief Функция вывода на экран массива значений типа "double"
 /// 
-/// @param arrayOfIntegers - массив значений
+/// @param arrayOfValues - массив значений
 /// @param bufferSize - размер массива
-void ShowArrayOfDoubles(double* newArray, int bufferSize);
+void ShowArrayOfDoubles(double* arrayOfValues, int bufferSize);
 
 /// @brief Функция вывода на экран массива значений типа "bool"
 /// 
-/// @param newArray - массив значений
+/// @param arrayOfValues - массив значений
 /// @param bufferSize - размер массива
-void ShowArrayOfBools(bool* newArray, int bufferSize);
+void ShowArrayOfBools(bool* arrayOfValues, int bufferSize);
 
 /// @brief Функция вывода на экран массива значений типа "char"
 /// 
-/// @param arrayOfChars - массив значений
+/// @param arrayOfCharacters - массив значений
 /// @param bufferSize - размер массива
-void ShowArrayOfChars(char* arrayOfChars, int bufferSize);
+void ShowArrayOfChars(char* arrayOfCharacters, int bufferSize);
 
 /// @brief Проверка, являются ли введённые символы - буквами
 /// 
@@ -74,8 +73,8 @@ bool IsSymbolIsLetter(char symbol);
 
 /// @brief Функция вывода акций никак на Россию?
 /// 
-/// @param arrayOfChars - массив значений
+/// @param arrayOfCharacters - массив значений
 /// @param bufferSize - размер массива
-void ShowLetters(char* arrayOfChars, int bufferSize);
+void ShowLetters(char* arrayOfCharacters, int bufferSize);
 
 #endif // !_COMMON_H_

@@ -12,18 +12,17 @@ using namespace std;
  * 
 */
 
-void SortArrayOfIntegers(int* arrayOfIntegers,
-	const int bufferSize)
+void SortArrayOfIntegers(int* arrayOfValues, const int bufferSize)
 {
 	for (int i = 0; i < bufferSize; ++i)
 	{
 		for (int j = 0; j < bufferSize - 1; ++j)
 		{
-			if (arrayOfIntegers[j] > arrayOfIntegers[j + 1])
+			if (arrayOfValues[j] > arrayOfValues[j + 1])
 			{
-				int temporaryPool = arrayOfIntegers[j];
-				arrayOfIntegers[j] = arrayOfIntegers[j + 1];
-				arrayOfIntegers[j + 1] = temporaryPool;
+				int temporaryPool = arrayOfValues[j];
+				arrayOfValues[j] = arrayOfValues[j + 1];
+				arrayOfValues[j + 1] = temporaryPool;
 			}
 		}
 	}
@@ -35,12 +34,12 @@ void SortArrayOfIntegers(int* arrayOfIntegers,
  *
 */
 
-int CompareValues(float* arrayOfFloats, int bufferSize, int requiredValue)
+int CompareValues(float* arrayOfValues, int bufferSize, int requiredValue)
 {
 	int sum = 0;
 	for (int i = 0; i < bufferSize; ++i)
 	{
-		if (arrayOfFloats[i] > requiredValue)
+		if (arrayOfValues[i] > requiredValue)
 		{
 			++sum;
 		}
@@ -70,54 +69,54 @@ void SecondBlockMain()
 			// 1.1.2.1
 			case SecondBlockTasks::First:
 			{
-				const int bufferSizeOfArrayOfIntegers = 10;
-				int* arrayOfIntegers = new int[bufferSizeOfArrayOfIntegers];
-				for (int i = 0; i < bufferSizeOfArrayOfIntegers; ++i)
+				const int bufferSize = 10;
+				int* arrayOfValues = new int[bufferSize];
+				for (int i = 0; i < bufferSize; ++i)
 				{
 					cout << "Type [" << i + 1 << "] element: ";
-					arrayOfIntegers[i] = GetCorrectIntegerValue();
+					arrayOfValues[i] = GetCorrectIntegerValue();
 				}
-				ShowArrayOfIntegers(arrayOfIntegers, bufferSizeOfArrayOfIntegers);
+				ShowArrayOfIntegers(arrayOfValues, bufferSize);
 				cout << "~ Sorted ~" << endl;
-				SortArrayOfIntegers(arrayOfIntegers, bufferSizeOfArrayOfIntegers);
-				ShowArrayOfIntegers(arrayOfIntegers, bufferSizeOfArrayOfIntegers);
-				delete[] arrayOfIntegers;
+				SortArrayOfIntegers(arrayOfValues, bufferSize);
+				ShowArrayOfIntegers(arrayOfValues, bufferSize);
+				delete[] arrayOfValues;
 				break;
 			}
 			// 1.1.2.2
 			case SecondBlockTasks::Second:
 			{
-				const int bufferSizeOfArrayOfFloats = 12;
+				const int bufferSize = 12;
 				float requiredValue;
-				float* arrayOfFloats = new float[bufferSizeOfArrayOfFloats];
-				for (int i = 0; i < bufferSizeOfArrayOfFloats; ++i)
+				float* arrayOfValues = new float[bufferSize];
+				for (int i = 0; i < bufferSize; ++i)
 				{
 					cout << "Type [" << i + 1 << "] element: ";
-					arrayOfFloats[i] = GetCorrectFloatValue();
+					arrayOfValues[i] = GetCorrectFloatValue();
 				}
-				ShowArrayOfFloats(arrayOfFloats, bufferSizeOfArrayOfFloats);
+				ShowArrayOfFloats(arrayOfValues, bufferSize);
 				cout << "Enter the number to compare: ";
 				requiredValue = GetCorrectFloatValue();
-				int countValues = CompareValues(arrayOfFloats, 
-					bufferSizeOfArrayOfFloats, requiredValue);
+				int countValues = CompareValues(arrayOfValues, 
+					bufferSize, requiredValue);
 				cout << endl << "Elements of array more than " << requiredValue
 					<< " is: " << countValues << endl << endl;
-				delete[] arrayOfFloats;
+				delete[] arrayOfValues;
 				break;
 			}
 			// 1.1.2.3
 			case SecondBlockTasks::Third:
 			{
-				const int bufferSizeOfArrayOfChars = 8;
-				char* arrayOfChars = new char[bufferSizeOfArrayOfChars];
-				for (int i = 0; i < bufferSizeOfArrayOfChars; ++i)
+				const int bufferSize = 8;
+				char* arrayOfSymbols = new char[bufferSize];
+				for (int i = 0; i < bufferSize; ++i)
 				{
 					cout << "Type [" << i + 1 << "] element: ";
-					cin >> arrayOfChars[i];
+					cin >> arrayOfSymbols[i];
 				}
-				ShowArrayOfChars(arrayOfChars, bufferSizeOfArrayOfChars);
-				ShowLetters(arrayOfChars, bufferSizeOfArrayOfChars);
-				delete[] arrayOfChars;
+				ShowArrayOfChars(arrayOfSymbols, bufferSize);
+				ShowLetters(arrayOfSymbols, bufferSize);
+				delete[] arrayOfSymbols;
 				break;
 			}
 			case SecondBlockTasks::Exit:
