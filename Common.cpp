@@ -99,46 +99,45 @@ double GetRandomDoubleValue()
 }
 
 
-void ShowArrayOfIntegers(int* arrayOfIntegers,
-	const int bufferSize)
+void ShowArrayOfIntegers(int* arrayOfValues, const int bufferSize)
 {
 	cout << endl << "Array of integers:" << endl;
 	for (int i = 0; i < bufferSize; ++i)
 	{
-		cout << "[" << arrayOfIntegers[i] << "]  ";
+		cout << "[" << arrayOfValues[i] << "]  ";
 	}
 	cout << endl << endl;
 }
 
 
-void ShowArrayOfFloats(float* arrayOfFloats, int bufferSize)
+void ShowArrayOfFloats(float* arrayOfValues, int bufferSize)
 {
 	cout << endl << "Array of floats:" << endl;
 	for (int i = 0; i < bufferSize; ++i)
 	{
-		cout << "[" << arrayOfFloats[i] << "]  ";
+		cout << "[" << arrayOfValues[i] << "]  ";
 	}
 	cout << endl << endl;
 }
 
 
-void ShowArrayOfDoubles(double* arrayOfDoubles, int bufferSize)
+void ShowArrayOfDoubles(double* arrayOfValues, int bufferSize)
 {
 	cout << "Array of double:" << endl;
 	for (int i = 0; i < bufferSize; ++i)
 	{
-		cout << "[" << arrayOfDoubles[i] << "]  ";
+		cout << "[" << arrayOfValues[i] << "]  ";
 	}
 	cout << endl << endl;
 }
 
 
-void ShowArrayOfBools(bool* arrayOfBools, int bufferSize)
+void ShowArrayOfBools(bool* arrayOfValues, int bufferSize)
 {
 	cout << "Array of bool:" << endl;
 	for (int i = 0; i < bufferSize; ++i)
 	{
-		if (arrayOfBools[i] == 1)
+		if (arrayOfValues[i] == 1)
 		{
 			cout << "true\t";
 		}
@@ -151,12 +150,12 @@ void ShowArrayOfBools(bool* arrayOfBools, int bufferSize)
 }
 
 
-void ShowArrayOfChars(char* arrayOfChars, int bufferSize)
+void ShowArrayOfChars(char* arrayOfCharacters, int bufferSize)
 {
 	cout << endl << "Array of chars:" << endl;
 	for (int i = 0; i < bufferSize; ++i)
 	{
-		cout << "[" << arrayOfChars[i] << "]  ";
+		cout << "[" << arrayOfCharacters[i] << "]  ";
 	}
 	cout << endl << endl;
 }
@@ -169,14 +168,14 @@ bool IsSymbolIsLetter(char symbol)
 }
 
 
-void ShowLetters(char* arrayOfChars, int bufferSize)
+void ShowLetters(char* arrayOfCharacters, int bufferSize)
 {
 	cout << "All letters in your array:" << endl;
 	for (int i = 0; i < bufferSize; ++i)
 	{
-		if (IsSymbolIsLetter(arrayOfChars[i]))
+		if (IsSymbolIsLetter(arrayOfCharacters[i]))
 		{
-			cout << "[" << arrayOfChars[i] << "]  ";
+			cout << "[" << arrayOfCharacters[i] << "]  ";
 		}
 	}
 	cout << endl << endl;
