@@ -20,9 +20,9 @@ void SortArrayOfIntegers(int* arrayOfValues, const int bufferSize)
 		{
 			if (arrayOfValues[j] > arrayOfValues[j + 1])
 			{
-				int temporaryPool = arrayOfValues[j];
+				int temporaryStorage = arrayOfValues[j];
 				arrayOfValues[j] = arrayOfValues[j + 1];
-				arrayOfValues[j + 1] = temporaryPool;
+				arrayOfValues[j + 1] = temporaryStorage;
 			}
 		}
 	}

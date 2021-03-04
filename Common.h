@@ -29,12 +29,12 @@ char GetCorrectCharValue();
 /// @param maximumBorder - максимальная граница
 /// 
 /// @return Результат получения случайного числа
-int GetRadndomIntegerValue(int minimumBorder, int maximumBorder);
+int GetRandomIntegerValue(int minimumBorder, int maximumBorder);
 
 /// @brief Функция получения случайного значения типа данных "double"
 /// 
 /// @return Результат получения случайного числа
-double GetRadndomDoubleValue();
+double GetRandomDoubleValue();
 
 /// @brief Функция вывода на экран массива значений типа "int"
 /// 

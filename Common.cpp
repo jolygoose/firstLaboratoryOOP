@@ -81,7 +81,7 @@ char GetCorrectCharValue()
 }
 
 
-int GetRadndomIntegerValue(int minimumBorder, int maximumBorder)
+int GetRandomIntegerValue(int minimumBorder, int maximumBorder)
 {
 	double fractionDenominator = static_cast <double> (RAND_MAX) + 1.0;
 	static const double fraction = (1.0 / fractionDenominator);
@@ -91,7 +91,7 @@ int GetRadndomIntegerValue(int minimumBorder, int maximumBorder)
 }
 
 
-double GetRadndomDoubleValue()
+double GetRandomDoubleValue()
 {
 	int maximumBorder = 10000;
 	return (double)(rand() % maximumBorder)

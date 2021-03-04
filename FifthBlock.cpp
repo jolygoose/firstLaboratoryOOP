@@ -60,7 +60,7 @@ int* MakeRandomArray(int arraySize)
 	int* newArrayOfIntegers = new int[arraySize];
 	for (int i = 0; i < arraySize; ++i)
 	{
-		newArrayOfIntegers[i] = GetRadndomIntegerValue
+		newArrayOfIntegers[i] = GetRandomIntegerValue
 			(minimumBorder, maximumBorder);
 	}
 	return newArrayOfIntegers;
@@ -169,7 +169,7 @@ void FifthBlockMain()
 				double* arrayOfDoubles = new double[bufferSize];
 				for (int i = 0; i < bufferSize; ++i)
 				{
-					arrayOfDoubles[i] = GetRadndomDoubleValue();
+					arrayOfDoubles[i] = GetRandomDoubleValue();
 				}
 				ShowArrayOfDoubles(arrayOfDoubles, bufferSize);
 				cout << "~ Sorted ~" << endl << endl;
@@ -188,7 +188,7 @@ void FifthBlockMain()
 				int* arrayOfIntegers = new int[bufferSizeOfArrayOfIntegers];
 				for (int i = 0; i < bufferSizeOfArrayOfIntegers; ++i)
 				{
-					arrayOfIntegers[i] = GetRadndomIntegerValue
+					arrayOfIntegers[i] = GetRandomIntegerValue
 						(minimumRandomBorder, maximumRandomBorder);
 				}
 				ShowArrayOfIntegers(arrayOfIntegers, bufferSizeOfArrayOfIntegers);
@@ -268,18 +268,3 @@ void FifthBlockMain()
 	}
 	return;
 }
-
-
-
-
-
-
-
-/*
-
-
-int main()
-{
-	
-}
-*/
