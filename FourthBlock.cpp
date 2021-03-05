@@ -11,12 +11,12 @@ using namespace std;
  *
 */
 
-void Foo(double a)
+void ShowWorkWithAValue(double a)
 {
-	cout << "Address of a in Foo(): " << &a << endl;
-	cout << "Value of a in Foo(): " << a << endl;
+	cout << "Address of a in ShowWorkWithAValue(): " << &a << endl;
+	cout << "Value of a in ShowWorkWithAValue(): " << a << endl;
 	a = 15.0;
-	cout << "New value of a in Foo(): " << a << endl;
+	cout << "New value of a in ShowWorkWithAValue(): " << a << endl;
 }
 
 /*
@@ -25,12 +25,12 @@ void Foo(double a)
  *
 */
 
-void Bar(double& a)
+void ShowWorkWithAReference(double& a)
 {
-	cout << "Address of a in Bar(): " << &a << endl;
-	cout << "Value of a in Bar(): " << a << endl;
+	cout << "Address of a in ShowWorkWithAReference(): " << &a << endl;
+	cout << "Value of a in ShowWorkWithAReference(): " << a << endl;
 	a = 15.0;
-	cout << "New value of a in Bar(): " << a << endl;
+	cout << "New value of a in ShowWorkWithAReference(): " << a << endl;
 }
 
 /*
@@ -39,7 +39,7 @@ void Bar(double& a)
  *
 */
 
-void Baz(double* a)
+void ShowWorkWithAPointer(double* a)
 {
 	cout << "Address in pointer: " << a << endl;
 	cout << "Address of pointer: " << &a << endl;
@@ -120,7 +120,7 @@ void FourthBlockMain()
 				double a = 5.0;
 				cout << "Address of a in main(): " << &a << endl
 					<< "Value of a in main(): " << a << endl << endl;
-				Foo(a);
+				ShowWorkWithAValue(a);
 				cout << endl << "Value of a in main(): " << a << endl << endl;
 				break;
 			}
@@ -132,7 +132,7 @@ void FourthBlockMain()
 				double a = 5.0;
 				cout << "Address of a in main(): " << &a << endl
 					<< "Value of a in main(): " << a << endl << endl;
-				Bar(a);
+				ShowWorkWithAReference(a);
 				cout << endl << "Value of a in main(): " << a << endl << endl;
 				break;
 			}
@@ -180,7 +180,7 @@ void FourthBlockMain()
 					<< "Address in pointerValue in main(): " << pointerValue << endl
 					<< "Address of pointerValue in main(): " << &pointerValue << endl
 					<< "Value of a in main(): " << value << endl << endl;
-				Baz(pointerValue);
+				ShowWorkWithAPointer(pointerValue);
 				cout << endl << "Value of a in main(): " << value << endl << endl;
 				break;
 			}

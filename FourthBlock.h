@@ -21,19 +21,19 @@ enum class FourthBlockTasks
 /// функцию по значению
 /// 
 /// @param a - переменная, передаваемая по значению
-void Foo(double a);
+void ShowWorkWithAValue(double a);
 
 /// @brief Функция, демонстрирующая работу с переменной, переданной в
 /// функцию по ссылке
 /// 
 /// @param a - переменная, передаваемая по ссылке
-void Bar(double& a);
+void ShowWorkWithAReference(double& a);
 
 /// @brief Функция, демонстрирующая работу с переменной, переданной в
 /// функцию по указателю
 /// 
 /// @param a - переменная, передаваемая по указателю
-void Baz(double* a);
+void ShowWorkWithAPointer(double* a);
 
 /// @brief Функция-меню для работы с заданиями четвёртого блока
 void FourthBlockMain();
