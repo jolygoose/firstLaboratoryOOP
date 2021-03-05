@@ -57,13 +57,13 @@ int* MakeRandomArray(int arraySize)
 {
 	int minimumBorder = 0;
 	int maximumBorder = 100;
-	int* newArrayOfIntegers = new int[arraySize];
+	int* newArrayOfValues = new int[arraySize];
 	for (int i = 0; i < arraySize; ++i)
 	{
-		newArrayOfIntegers[i] = GetRandomIntegerValue
+		newArrayOfValues[i] = GetRandomIntegerValue
 			(minimumBorder, maximumBorder);
 	}
-	return newArrayOfIntegers;
+	return newArrayOfValues;
 }
 
 /*
@@ -115,40 +115,46 @@ void FifthBlockMain()
 			// 1.1.5.1
 			case FifthBlockTasks::First:
 			{
-				const int bufferSizeOfArrayOfDoubles = 8;
+				cout << "Function that works with an array of real numbers"
+					<< endl << endl;
+				const int bufferSize = 8;
 				const double measurementStep = 0.5;
-				double* arrayOfDoubles = new double[bufferSizeOfArrayOfDoubles];
-				for (int i = 0; i < bufferSizeOfArrayOfDoubles; ++i)
+				double* arrayOfValues = new double[bufferSize];
+				for (int i = 0; i < bufferSize; ++i)
 				{
-					arrayOfDoubles[i] = i + measurementStep;
+					arrayOfValues[i] = i + measurementStep;
 				}
-				ShowArrayOfDoubles(arrayOfDoubles, bufferSizeOfArrayOfDoubles);
-				delete[] arrayOfDoubles;
+				ShowArrayOfDoubles(arrayOfValues, bufferSize);
+				delete[] arrayOfValues;
 				break;
 			}
 			// 1.1.5.2
 			case FifthBlockTasks::Second:
 			{
-				const int bufferSizeOfArrayOfBools = 8;
-				bool* arrayOfBools = new bool[bufferSizeOfArrayOfBools];
-				for (int i = 0; i < bufferSizeOfArrayOfBools; ++i)
+				cout << "Function that works with an array of bools"
+					<< endl << endl;
+				const int bufferSize = 8;
+				bool* arrayOfValues = new bool[bufferSize];
+				for (int i = 0; i < bufferSize; ++i)
 				{
 					if (i % 2 == 1)
 					{
-						arrayOfBools[i] = true;
+						arrayOfValues[i] = true;
 					}
 					else
 					{
-						arrayOfBools[i] = false;
+						arrayOfValues[i] = false;
 					}
 				}
-				ShowArrayOfBools(arrayOfBools, bufferSizeOfArrayOfBools);
-				delete[] arrayOfBools;
+				ShowArrayOfBools(arrayOfValues, bufferSize);
+				delete[] arrayOfValues;
 				break;
 			}
 			// 1.1.5.3
 			case FifthBlockTasks::Third:
 			{
+				cout << "Function that works with an array of characters"
+					<< endl << endl;
 				int bufferSize = 0;
 				cout << "Enter array size: ";
 				bufferSize = GetCorrectIntegerValue();
@@ -165,38 +171,42 @@ void FifthBlockMain()
 			// 1.1.5.4
 			case FifthBlockTasks::Fourth:
 			{
+				cout << "Function that works with an array of real numbers "
+					<< "and sorts it" << endl << endl;
 				int bufferSize = 10;
-				double* arrayOfDoubles = new double[bufferSize];
+				double* arrayOfValues = new double[bufferSize];
 				for (int i = 0; i < bufferSize; ++i)
 				{
-					arrayOfDoubles[i] = GetRandomDoubleValue();
+					arrayOfValues[i] = GetRandomDoubleValue();
 				}
-				ShowArrayOfDoubles(arrayOfDoubles, bufferSize);
+				ShowArrayOfDoubles(arrayOfValues, bufferSize);
 				cout << "~ Sorted ~" << endl << endl;
-				SortArrayOfDoubles(arrayOfDoubles, bufferSize);
-				ShowArrayOfDoubles(arrayOfDoubles, bufferSize);
-				delete[] arrayOfDoubles;
+				SortArrayOfDoubles(arrayOfValues, bufferSize);
+				ShowArrayOfDoubles(arrayOfValues, bufferSize);
+				delete[] arrayOfValues;
 				break;
 			}
 			// 1.1.5.5
 			case FifthBlockTasks::Fifth:
 			{
-				int bufferSizeOfArrayOfIntegers = 10;
+				cout << "A function that fills an array with random integer values "
+					<< "and searches for a number in it" << endl << endl;
+				int bufferSize = 10;
 				int searchingValue = 0;
-				int minimumRandomBorder = 1;
-				int maximumRandomBorder = 10000;
-				int* arrayOfIntegers = new int[bufferSizeOfArrayOfIntegers];
-				for (int i = 0; i < bufferSizeOfArrayOfIntegers; ++i)
+				int minimumBorder = 1;
+				int maximumBorder = 10000;
+				int* arrayOfValues = new int[bufferSize];
+				for (int i = 0; i < bufferSize; ++i)
 				{
-					arrayOfIntegers[i] = GetRandomIntegerValue
-						(minimumRandomBorder, maximumRandomBorder);
+					arrayOfValues[i] = GetRandomIntegerValue
+						(minimumBorder, maximumBorder);
 				}
-				ShowArrayOfIntegers(arrayOfIntegers, bufferSizeOfArrayOfIntegers);
+				ShowArrayOfIntegers(arrayOfValues, bufferSize);
 				cout << "Enter searching value: ";
 				searchingValue = GetCorrectIntegerValue();
-				int resultOfSearch = SearchValue(arrayOfIntegers,
-					bufferSizeOfArrayOfIntegers, searchingValue);
-				if ((searchingValue != arrayOfIntegers[0]) && (resultOfSearch == 0))
+				int resultOfSearch = SearchValue(arrayOfValues,
+					bufferSize, searchingValue);
+				if ((searchingValue != arrayOfValues[0]) && (resultOfSearch == 0))
 				{
 					cout << "There is no desired element" << endl << endl;
 				}
@@ -205,28 +215,33 @@ void FifthBlockMain()
 					cout << endl << "Index of searching value " << searchingValue
 						<< " is: " << resultOfSearch << endl << endl;
 				}
-				delete[] arrayOfIntegers;
+				delete[] arrayOfValues;
 				break;
 			}
 			// 1.1.5.6
 			case FifthBlockTasks::Sixth:
 			{
-				int bufferSizeOfArrayOfChars = 15;
-				char* arrayOfChars = new char[bufferSizeOfArrayOfChars];
+				cout << "A function that works with an array of characters "
+					<< "and searches for a character in it" << endl << endl;
+				int bufferSize = 15;
+				char* arrayOfCharacters = new char[bufferSize];
 				cout << "Fill 15 chars into an array" << endl << endl;
-				for (int i = 0; i < bufferSizeOfArrayOfChars; ++i)
+				for (int i = 0; i < bufferSize; ++i)
 				{
 					cout << "Enter a[" << i << "]: ";
-					arrayOfChars[i] = GetCorrectCharValue();
+					arrayOfCharacters[i] = GetCorrectCharValue();
 				}
-				ShowArrayOfChars(arrayOfChars, bufferSizeOfArrayOfChars);
-				ShowLetters(arrayOfChars, bufferSizeOfArrayOfChars);
-				delete[] arrayOfChars;
+				ShowArrayOfChars(arrayOfCharacters, bufferSize);
+				ShowLetters(arrayOfCharacters, bufferSize);
+				delete[] arrayOfCharacters;
 				break;
 			}
 			// 1.1.5.7
 			case FifthBlockTasks::Seventh:
 			{
+				cout << "A function that fills three arrays with "
+					<< "random numbers, shows them and "
+					<< "frees memory after that" << endl << endl;
 				int firstArraySize = 5;
 				int secondArraySize = 8;
 				int thirdArraySize = 13;
@@ -244,10 +259,10 @@ void FifthBlockMain()
 			// 1.1.5.8
 			case FifthBlockTasks::Eighth:
 			{
+				cout << "Function with a bug fix for a memory leak" << endl << endl;
 				int count = 15;
 				int* values = ReadArray(count);
 				cout << "Count is: " << CountPositiveValues(values, count) << endl;
-				
 				delete[] values;
 				count = 20;
 				values = ReadArray(count);

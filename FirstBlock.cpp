@@ -55,12 +55,16 @@ void FirstBlockMain()
 			// 1.1.1.1
 			case FirstBlockTasks::First:
 			{
+				cout << "Sample function for working with a breakpoints" 
+					<< endl << endl;
 				FirstFunctionWithBreakpoints();
 				break;
 			}
 			// 1.1.1.2
 			case FirstBlockTasks::Second:
 			{
+				cout << "Sample function for working with a breakpoints"
+					<< endl << endl;
 				SecondFunctionWithBreakpoints();
 				break;
 			}

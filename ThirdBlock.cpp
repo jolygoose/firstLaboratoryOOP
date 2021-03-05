@@ -13,29 +13,21 @@ using namespace std;
  *
 */
 
-// TODO: Powers with 'minus'
 double GetPower(double base, int exponent)
 {
-	double result = 0;
-	if (exponent == 0)
+	int index = 1;
+	double result = 1;
+	while (index <= abs(exponent))
 	{
-		result = 1;
+		result *= base;
+		index++;
 	}
-	else if (exponent == 1)
+	if (exponent >= 0)
 	{
-		result = base;
+		return result;
 	}
-	else if ((exponent % 2) == 1)
-	{
-		result = base * GetPower(base * base, exponent / 2);
-	}
-	else
-	{
-		result = GetPower(base * base, exponent / 2);
-	}
-	return result;
+	return (1 / result);
 }
-
 
 /*
  *
@@ -45,6 +37,7 @@ double GetPower(double base, int exponent)
 
 void DemoGetPower(double base, int exponent)
 {
+
 	double result = GetPower(base, exponent);
 	cout << endl << base << " ^ " << exponent << " = " << result << endl << endl;
 }
@@ -85,6 +78,8 @@ void ThirdBlockMain()
 			// 1.1.3.1
 			case ThirdBlockTasks::Second:
 			{
+				cout << "Function for raising a number (base) to a power (exponent)"
+					<< endl << endl;
 				cout << "Enter base value: ";
 				double base = GetCorrectDoubleValue();
 				cout << endl << "Enter exponent value: ";
@@ -96,6 +91,9 @@ void ThirdBlockMain()
 			// 1.1.3.2
 			case ThirdBlockTasks::Third:
 			{
+				cout << "Function for raising a number (base) to a power (exponent) "
+					<< "and representing in the form 'base ^ exponent = result'"
+					<< endl << endl;
 				cout << "Enter base value: ";
 				double base = GetCorrectDoubleValue();
 				cout << endl << "Enter exponent value: ";
@@ -106,6 +104,7 @@ void ThirdBlockMain()
 			// 1.1.3.3
 			case ThirdBlockTasks::Fourth:
 			{
+				cout << "The function of rounding a number to tens" << endl << endl;
 				cout << "Enter value: ";
 				int value = GetCorrectIntegerValue();
 				int oldValue = value;

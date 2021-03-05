@@ -69,6 +69,8 @@ void SecondBlockMain()
 			// 1.1.2.1
 			case SecondBlockTasks::First:
 			{
+				cout << "An example of working with an array of "
+					<< "integer values and sorting them" << endl << endl;
 				const int bufferSize = 10;
 				int* arrayOfValues = new int[bufferSize];
 				for (int i = 0; i < bufferSize; ++i)
@@ -86,6 +88,9 @@ void SecondBlockMain()
 			// 1.1.2.2
 			case SecondBlockTasks::Second:
 			{
+				cout << "An example of working with an array of "
+					<< "float values and finding number of values " 
+					<< "greater than comparable" << endl << endl;
 				const int bufferSize = 12;
 				float requiredValue;
 				float* arrayOfValues = new float[bufferSize];
@@ -107,6 +112,8 @@ void SecondBlockMain()
 			// 1.1.2.3
 			case SecondBlockTasks::Third:
 			{
+				cout << "An example of working with an array of characters "
+					<< "and finding number of letters in an array" << endl << endl;
 				const int bufferSize = 8;
 				char* arrayOfSymbols = new char[bufferSize];
 				for (int i = 0; i < bufferSize; ++i)
