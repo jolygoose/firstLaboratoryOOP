@@ -12,13 +12,21 @@ enum class ThirdBlockTasks
 	Exit = 27
 };
 
-/// @brief Функция, возводящая поступающее на вход число в 
+/// @brief Рекурсивная функция, возводящая поступающее на вход число в 
 /// поступающую на вход степень
 /// 
 /// @param base - основание
 /// @param exponent - степень
 /// 
 /// @return Результат возведения числа в степень
+double Power(double base, int exponent);
+
+/// @brief Функция, обрабатывающая результат возведения числа в степень
+/// 
+/// @param base - основание
+/// @param exponent - степень
+/// 
+/// @return Результат обработки
 double GetPower(double base, int exponent);
 
 /// @brief Функция, вызывающая функцию GetPower() и выводящая её результат

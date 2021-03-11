@@ -13,6 +13,33 @@ using namespace std;
  *
 */
 
+double Power(double base, int exponent)
+{
+	if (exponent == 0)
+	{
+		return 1;
+	}
+	if (exponent == 1)
+	{
+		return base;
+	}
+	else
+	{
+		return (base * Power(base, (exponent - 1)));
+	}
+}
+
+double GetPower(double base, int exponent)
+{
+	double result = Power(base, abs(exponent));
+	if (exponent < 0)
+	{
+		return (1 / result);
+	}
+	return result;
+}
+
+/*
 double GetPower(double base, int exponent)
 {
 	int index = 1;
@@ -28,6 +55,7 @@ double GetPower(double base, int exponent)
 	}
 	return (1 / result);
 }
+*/
 
 /*
  *
